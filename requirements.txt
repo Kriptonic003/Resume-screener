@@ -1,7 +1,7 @@
 fastapi
 uvicorn
 python-multipart
-gradio
+
 requests
 pdfplumber
 python-docx
