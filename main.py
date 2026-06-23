@@ -16,7 +16,9 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 @app.get("/")
 async def root():
     return FileResponse(os.path.join("static", "index.html"))
-
+@app.get("/test")
+async def test():
+    return {"message": "Hello from main.py"}
 if __name__ == "__main__":
     import uvicorn
     port = int(os.environ.get("PORT", 8000))
